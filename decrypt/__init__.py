@@ -6,12 +6,13 @@ import fileinput
 import random
 import string
 
+lines = []
+chance = 0.1
+confirmed_per_line = []
+
+
+
 def main():
-    lines = []
-    chance = 0.1
-    confirmed_per_line = []
-
-
     screen = curses.initscr()
     curses.noecho()
     curses.curs_set(0)
@@ -57,4 +58,4 @@ def main():
     finally:
         curses.endwin()
     for line in lines:
-    print line
+        print line
